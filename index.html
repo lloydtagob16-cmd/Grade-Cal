@@ -3,9 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grades</title>
+    <meta name="description" content="A teacher dashboard for student grades and academic performance.">
+    <title>Grades CAL | Teacher Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Grades</h1>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Main navigation">
+            <a class="brand" href="#overview" aria-label="Grades CAL home">
+                <span class="brand-mark" aria-hidden="true">G</span>
+                <span>
+                    <strong>Grades CAL</strong>
+                    <small>Teacher workspace</small>
+                </span>
+            </a>
+
+            <p class="nav-label">WORKSPACE</p>
+            <nav class="navigation">
+                <a class="nav-link active" href="#overview" aria-current="page">
+                    <span class="nav-icon" aria-hidden="true">⌂</span>
+                    Overview
+                </a>
+                <a class="nav-link" href="#classes">
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    Classes
+                </a>
+                <a class="nav-link" href="#students">
+                    <span class="nav-icon" aria-hidden="true">♙</span>
+                    Students
+                </a>
+                <a class="nav-link" href="#assessments">
+                    <span class="nav-icon" aria-hidden="true">✓</span>
+                    Assessments
+                </a>
+                <a class="nav-link" href="#reports">
+                    <span class="nav-icon" aria-hidden="true">▤</span>
+                    Reports
+                </a>
+            </nav>
+
+            <div class="sidebar-note">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>
+                    <strong>Preview mode</strong>
+                    <small>Data storage is not connected</small>
+                </span>
+            </div>
+        </aside>
+
+        <div class="page">
+            <header class="topbar">
+                <div class="breadcrumb">Teacher workspace <span>/</span> Overview</div>
+                <div class="account">
+                    <span class="account-avatar" aria-hidden="true">T</span>
+                    <span>
+                        <strong>Teacher</strong>
+                        <small>Account setup required</small>
+                    </span>
+                </div>
+            </header>
+
+            <main id="main-content">
+                <section class="page-heading" id="overview">
+                    <div>
+                        <p class="eyebrow">ACADEMIC PERFORMANCE</p>
+                        <h1>Overview</h1>
+                        <p class="intro">Keep track of classes, assessments, and student progress in one place.</p>
+                    </div>
+                    <span class="term-badge">Teacher dashboard</span>
+                </section>
+
+                <section class="notice" aria-label="Prototype status">
+                    <span class="notice-icon" aria-hidden="true">i</span>
+                    <p><strong>Front-end preview.</strong> This page is a visual starting point. Teacher sign-in, saved records, grade calculations, and report printing are not connected yet.</p>
+                </section>
+
+                <section class="stats-grid" aria-label="Gradebook summary">
+                    <article class="stat-card">
+                        <span class="stat-icon lavender" aria-hidden="true">▦</span>
+                        <p class="stat-label">Teaching assignments</p>
+                        <p class="stat-value">—</p>
+                        <p class="stat-caption">No assignments added</p>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-icon mint" aria-hidden="true">♙</span>
+                        <p class="stat-label">Students</p>
+                        <p class="stat-value">—</p>
+                        <p class="stat-caption">No class rosters yet</p>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-icon peach" aria-hidden="true">✓</span>
+                        <p class="stat-label">Assessments</p>
+                        <p class="stat-value">—</p>
+                        <p class="stat-caption">No grades recorded</p>
+                    </article>
+                    <article class="stat-card">
+                        <span class="stat-icon blue" aria-hidden="true">↗</span>
+                        <p class="stat-label">Class performance</p>
+                        <p class="stat-value">—</p>
+                        <p class="stat-caption">Available when grades are added</p>
+                    </article>
+                </section>
+
+                <section class="content-section" id="classes">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">YOUR TEACHING LOAD</p>
+                            <h2>Teaching assignments</h2>
+                        </div>
+                        <a class="text-link" href="#assignment-details">View assignment setup <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="empty-card">
+                        <span class="empty-icon" aria-hidden="true">▦</span>
+                        <h3>No assignments yet</h3>
+                        <p>Teaching assignments will appear here after a teacher, subject, section, and academic term are set up.</p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="students">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">CLASS ROSTERS</p>
+                            <h2>Students</h2>
+                        </div>
+                        <span class="muted-label">No roster selected</span>
+                    </div>
+                    <div class="table-card">
+                        <div class="table-toolbar">
+                            <div>
+                                <h3>Student list</h3>
+                                <p>Student records are organized by section and academic term.</p>
+                            </div>
+                            <span class="count-badge">0 students</span>
+                        </div>
+                        <div class="table-scroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Student</th>
+                                        <th scope="col">Student number</th>
+                                        <th scope="col">Section</th>
+                                        <th scope="col">Current grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-empty" colspan="4">Choose a teaching assignment to view its student roster.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section" id="assessments">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">GRADEBOOK</p>
+                            <h2>Assessments</h2>
+                        </div>
+                        <span class="muted-label">No assessment selected</span>
+                    </div>
+                    <div class="assessment-card">
+                        <div>
+                            <h3>Track everyday learning</h3>
+                            <p>Organize gradebook items by category and record student scores when an assignment is connected.</p>
+                        </div>
+                        <div class="category-list" aria-label="Assessment categories">
+                            <span>Quizzes</span>
+                            <span>Assignments</span>
+                            <span>Activities</span>
+                            <span>Attendance</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section" id="reports">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">STUDENT PERFORMANCE</p>
+                            <h2>Reports</h2>
+                        </div>
+                    </div>
+                    <div class="empty-card report-empty">
+                        <span class="empty-icon" aria-hidden="true">▤</span>
+                        <h3>Reports will be available here</h3>
+                        <p>Add a teaching assignment and grade records before preparing a printable student report.</p>
+                    </div>
+                </section>
+
+                <section class="content-section setup-section" id="assignment-details">
+                    <p class="eyebrow">NEXT STEP</p>
+                    <h2>Connect the gradebook</h2>
+                    <p class="setup-copy">To make this dashboard functional, the next module needs a secure way to save teacher accounts, class assignments, student rosters, grading weights, scores, and attendance. A browser-only page cannot safely connect directly to a MySQL database.</p>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <span>Grades CAL</span>
+                <span>Student grading workspace</span>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
